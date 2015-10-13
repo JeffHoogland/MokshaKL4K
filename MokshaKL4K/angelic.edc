@@ -1,0 +1,119 @@
+//#########################################################
+//### Angelic  theme E17                                   #
+//### By Agust                                         #
+//### Agustin J Verdegal T			  #
+//### maintained by  Agust.                   #
+//#########################################################
+//
+/*Agust*/
+#ifdef E17_PROFILE
+# if E17_PROFILE == LOWRES_PDA
+#  define SM "sm_"
+# elif E17_PROFILE == MEDIUMRES_PDA
+#  define SM "sm_"
+# elif E17_PROFILE == HIRES_PDA
+#  define SM "sm_"
+# elif E17_PROFILE == SLOW_PC
+#  define SM "sm_"
+# elif E17_PROFILE == MEDIUM_PC
+#  define SM
+# elif E17_PROFILE == FAST_PC
+#  define SM
+# endif
+#else
+# define SM
+#endif
+
+fonts {
+   font: "Vera.ttf"   "Edje-Vera";
+   font: "VeraBd.ttf" "Edje-Vera-Bold";
+}
+
+#if 0
+spectra {
+  spectrum {
+    name: "black_to_trans";
+    color: 0 0 0 255 1;
+    color: 0 0 0 0 1;
+  }
+}
+#endif
+
+data
+ {
+   item: "theme/name"     "KL4K";
+   item: "gtk-theme" "Ambiance";
+   item: "theme/version"  "V-2";
+   item: "theme/author"   "Agustin J Verdegal T.";
+   item: "theme/license"  "Theme: Custom;Font: Bitstream Vera fonts";
+}
+
+collections {
+#include "angelic_background.edc"
+#include "shutdown.edc"
+#include "angelic_border.edc"
+#include "angelic_systray.edc"
+#include "angelic_calendar.edc"
+#include "angelic_clock.edc"
+#include "angelic_sys.edc"
+#include "mixer.edc" 
+#include "angelic_gadman.edc"
+#include "angelic_ibar.edc"
+#include "angelic_menu.edc"
+#include "angelic_pager.edc"
+#include "angelic_resize.edc"
+#include "angelic_move.edc"
+#include "angelic_temperature.edc"
+#include "angelic_init.edc"
+#include "angelic_mem.edc"
+#include "angelic_error.edc"
+#include "angelic_ibox.edc"
+#include "angelic_start.edc"
+#include "angelic_winlist.edc"
+#include "angelic_transitions.edc"
+#include "angelic_dialog.edc"
+#include "angelic_connman.edc"
+#include "angelic_configure.edc"
+#include "angelic_pointer.edc"
+#include "angelic_about.edc"
+#include "angelic_theme_about.edc"
+#include "angelic_entry.edc"
+#include "angelic_fileman.edc"
+#include "angelic_filesel.edc"   
+#include "angelic_check.edc"
+#include "angelic_radio.edc"
+#include "angelic_frame.edc"
+#include "angelic_button.edc"
+#include "angelic_label.edc"
+#include "angelic_scrollframe.edc"
+#include "angelic_ilist.edc"
+#include "angelic_tlist.edc"
+#include "angelic_slider.edc"
+#include "angelic_exebuf.edc"
+#include "angelic_desklock.edc"
+#include "angelic_textblock.edc"
+#include "angelic_shelf.edc"
+#include "angelic_preview.edc"
+#include "angelic_cslider.edc"
+#include "angelic_spectrum.edc"
+#include "angelic_color_well.edc"
+#include "angelic_net.edc"
+#include "angelic_battery.edc"
+#include "angelic_tclock.edc"
+#include "angelic_uptime.edc"
+#include "angelic_taskbar.edc"
+#include "angelic_taskbar2.edc"
+#include "angelic_toolbar.edc"
+#include "angelic_deskshow.edc"
+#include "angelic_language.edc"
+#include "angelic_deskpreview.edc"
+#include "angelic_icons.edc"
+#include "angelic_fontpreview.edc"
+#include "angelic_wizard.edc"
+#include "definitions.edc"
+#include "images.edc"
+#include "everything.edc"
+#include "efm_navigation.edc"
+#include "angelic_tasks.edc"
+}
+

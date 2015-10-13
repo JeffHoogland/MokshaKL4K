@@ -1,0 +1,90 @@
+group {
+   name: "e/widgets/configure/main";
+   parts {
+      part {
+         name:          "base";
+         mouse_events:  0;
+         type:          RECT;
+         description {
+            state:    "default" 0.0;
+            rel1 {
+               relative: 0.0  0.0;
+               offset:   0    0;
+            }
+            rel2 {
+               relative: 1.0  1.0;
+               offset:   -1   -1;
+            }
+            color: 255 255 255 255;
+         }
+    }
+      part {
+         name:          "title";
+         type:          TEXT;
+         effect:        SOFT_SHADOW;
+         mouse_events:  0;
+         description {
+            state:    "default" 0.0;
+            fixed:    0 1;
+            align:    0.5 0.5;
+            rel1 {
+               to: "base";
+               relative: 0.0  0.0;
+               offset:   6    20;
+            }
+            rel2 {
+               to_y: "base";
+               relative: 1.0  0.0;
+               offset:   -7   20;
+            }
+            color: 51 51 51 255;
+            color3: 46 52 54 0;
+            color_class: "configure_title";
+            text {
+               text:     "Enlightenment Configuration";
+               font:     "Edje-Vera-Bold";
+               size:     16;
+               min:      1 1;
+               align:    0.5 0.5;
+               text_class: "configure";        
+            }
+         }
+      }
+      part {
+         name:          "e.swallow.content";
+         type:          SWALLOW;
+         description {
+            state: "default" 0.0;
+            align: 0.5 0.5;
+            min: 320 200;
+            rel1 {
+               to_y: "title";
+               relative: 0.0 1.0;
+               offset: 16 5;
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               offset:   -17 -35;
+            }
+         }
+      }
+      part {
+         name: "e.swallow.button";
+         type: SWALLOW;
+         description {
+            state: "default" 0.0;
+            align: 0.5 1.0;
+            fixed: 0 1;
+            rel1 {
+               to_y: "e.swallow.content";
+               relative: 0.5 1.0;
+               offset:   0   2;
+            }
+            rel2 {
+               relative: 0.5 1.0;
+               offset:   0  -2;
+            }               
+         }
+      }
+   }
+}

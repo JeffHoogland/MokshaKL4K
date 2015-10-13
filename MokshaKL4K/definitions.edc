@@ -1,0 +1,10 @@
+//This is the borderless one, i.e. without the black line around it.
+//Used for window borders, shelves etc.
+#define SURFACE \
+image.normal: "images/surface.png"; \
+image.border: 8 8 8 8; \
+
+//This is the one with the black outline. Used pretty much everywhere, buttons, taskbar etc.
+#define SURFACE_LIGHT \
+image.normal: "images/surface-light.png"; \
+image.border: 8 8 8 8; \
