@@ -473,7 +473,8 @@ group { name: "e/modules/everything/thumbview/item/thumb";
          description {
             state: "selected" 0.0;
             inherit: "default" 0.0;
-            color: 255 255 255 255;
+            //The selected item's background color
+            color: 30 30 30 40;
          }
       }
       part {
@@ -908,6 +909,7 @@ group { name: "e/modules/everything/tab_item";
          description {
             state: "selected" 0.0;
             inherit: "default" 0.0;
+            //color: 30 30 30 255;
             color_class: "focus";
          }
       }

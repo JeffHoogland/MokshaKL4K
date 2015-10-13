@@ -102,7 +102,7 @@ collections {
 #include "angelic_tclock.edc"
 #include "angelic_uptime.edc"
 #include "angelic_taskbar.edc"
-#include "angelic_taskbar2.edc"
+//#include "angelic_taskbar2.edc"
 #include "angelic_toolbar.edc"
 #include "angelic_deskshow.edc"
 #include "angelic_language.edc"
