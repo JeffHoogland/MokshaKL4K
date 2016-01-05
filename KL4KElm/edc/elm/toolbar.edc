@@ -751,21 +751,21 @@ group { name: "elm/toolbar/item/default";
          }
       }
       program { name: "st3";
-         signal: "elm,icon,hidden"; source: "elm";
-         script {
-           new m = get_int(btmode);
-            m |= ICON; set_int(btmode, m);
-            eval_mode(m);
-         }
-      }
-      program { name: "st4";
-         signal: "elm,icon,visible"; source: "elm";
-         script {
-            new m = get_int(btmode);
-            m &= ~ICON; set_int(btmode, m);
-            eval_mode(m);
-         }
-      }
+		signal: "elm,icon,hidden"; source: "elm";
+		script {
+			new m = get_int(btmode);
+			m &= ~ICON; set_int(btmode, m);
+			eval_mode(m);
+		}
+	}
+	program { name: "st4";
+	   signal: "elm,icon,visible"; source: "elm";
+	   script {
+		  new m = get_int(btmode);
+		  m |= ICON; set_int(btmode, m);
+		  eval_mode(m);
+	   }
+	}
       program { name: "st5";
          signal: "elm,state,disabled"; source: "elm";
          script {
