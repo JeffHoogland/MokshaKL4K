@@ -134,7 +134,6 @@ group { name: "e/widgets/border/default/border";
 			aspect:   1.0 1.0;
 			aspect_preference: VERTICAL;
             image.normal: "bg-top-rounded-1px@2.png";
-            //~ image.border: 6 2 3 3;
             rel1 {
 	        relative: 0.0  0.0;
 	        offset:   -1  -1;
@@ -145,11 +144,6 @@ group { name: "e/widgets/border/default/border";
 	        offset:   0  0;
 	        to_y:     "titlebar";
 	        }
-            //~ image.border_scale: 1;
-            //~ image.border_scale_by: 0.25;
-            //~ image.middle: SOLID;
-            //~ rel2.to_y: "e.text.title";
-            //~ rel2.relative: 1.0 1.0;
             color_class: "border_frame";
             fill.smooth: 0;
          }
