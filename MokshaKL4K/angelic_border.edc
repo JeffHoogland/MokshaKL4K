@@ -74,6 +74,7 @@ group { name: "e/widgets/border/default/border";
 	image: "winbt/minimize_focused_normal.png" COMP;
 	image: "winbt/minimize_focused_prelight.png" COMP;
 	image: "winbt/minimize_focused_pressed.png" COMP;
+	image: "bg-top-rounded-1px@2.png" COMP;
 	}
 
 	parts {
@@ -81,7 +82,7 @@ group { name: "e/widgets/border/default/border";
 			description { state: "default" 0.0;
 				min: 0 27;
 				rel1.relative: 0.0 0.0;
-				rel1.offset: 0 0;
+				rel1.offset: 20 0;
 				rel2.to_y: "title_base";
 				rel2.relative: 1.0 1.0;
 				rel2.offset: -1 -1;
@@ -115,7 +116,7 @@ group { name: "e/widgets/border/default/border";
 		part { name: "title_base"; type: RECT;
             mouse_events: 0;
             description {
-				align: 0.0 0.5;
+			   align: 0.0 0.5;
                state: "default" 0.0;
                visible: 0;
                rel2 {
@@ -126,6 +127,33 @@ group { name: "e/widgets/border/default/border";
                }
             }
         }
+        image { name: "top_bg"; nomouse;
+         scale: 1;
+         desc { "default";
+			align:    0.0 0.0;
+			aspect:   1.0 1.0;
+			aspect_preference: VERTICAL;
+            image.normal: "bg-top-rounded-1px@2.png";
+            //~ image.border: 6 2 3 3;
+            rel1 {
+	        relative: 0.0  0.0;
+	        offset:   -1  -1;
+	        to_x:     "title_base";
+	        }
+	        rel2 {
+	        relative: 0.0  1.0;
+	        offset:   0  0;
+	        to_y:     "titlebar";
+	        }
+            //~ image.border_scale: 1;
+            //~ image.border_scale_by: 0.25;
+            //~ image.middle: SOLID;
+            //~ rel2.to_y: "e.text.title";
+            //~ rel2.relative: 1.0 1.0;
+            color_class: "border_frame";
+            fill.smooth: 0;
+         }
+      }
         part { name: "bt_close"; type: IMAGE;
 			description {
 				align: 0.0 0.5;
@@ -175,27 +203,38 @@ group { name: "e/widgets/border/default/border";
 			}
         }
         
-        part { name: "icon"; type: SWALLOW;
+part { name: "icon"; type: SPACER;
          description { state: "default" 0.0;
             rel1.to: "e.event.icon";
             rel2.to: "e.event.icon";
          }
+         //~ description { state: "bounce1" 0.0;
+            //~ inherit: "default" 0.0;
+            //~ rel1.relative: 0.5 0.5;
+            //~ rel2.relative: 0.5 0.5;
+         //~ }
+         //~ description { state: "bounce2" 0.0;
+            //~ inherit: "default" 0.0;
+            //~ rel1.relative: -0.5 -0.5;
+            //~ rel2.relative: 1.2 1.2;
+         //~ }
       }
       part { name: "e.swallow.icon"; type: SWALLOW; mouse_events: 0;
          description { state: "default" 0.0;
             rel1.to: "icon";
-            rel1.relative: 0.15 0.15;
+            rel1.relative: 0.10 0.10;
             rel2.to: "icon";
-            rel2.relative: 0.85 0.85;
+            rel2.relative: 0.90 0.90;
             rel2.offset: 0 0;
          }
       }
-      part { name: "e.event.icon"; type: RECT;
+      
+       part { name: "e.event.icon"; type: RECT;
          description { state: "default" 0.0;
             fixed: 1 0;
             rel1.relative: 0.0 0.0;
             rel2.relative: 0.0 1.0;
-            rel2.to_y: "title_base";
+            rel2.to_y: "top_bg";
             align: 0.0 0.5;
             aspect: 1.0 1.0; aspect_preference: VERTICAL;
             color: 0 0 0 0;
