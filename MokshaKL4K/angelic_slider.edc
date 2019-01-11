@@ -124,7 +124,8 @@ group {
 	       size:     10;
 	       min:      1 1;
 	       align:    0.5 0.5;
-               text_class: "slider";	       
+	       ellipsis: -1;
+           text_class: "slider";	       
 	    }
 	 }
       }
@@ -188,6 +189,24 @@ group {
 	    }
 	 }
       }
+      
+      	part {
+            name: "e.swallow.bar";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1 {
+                  to_x: "e.dragable.slider";
+                  to_y: "sld_base";
+                  offset: 0 5;
+               }
+               rel2 {
+                  to_x: "e.dragable.slider";
+                  to_y: "sld_base";
+                  offset: -1 -6;
+               }
+            }
+         }
+         
       part {
 	 name: "e.dragable.slider";
 	 type: RECT;
@@ -538,7 +557,8 @@ group {
 	       size:     10;
 	       min:      1 1;
 	       align:    0.5 0.5;
-               text_class: "slider";	       
+	       ellipsis: -1;
+           text_class: "slider";	       
 	    }
 	 }
       }
@@ -602,6 +622,24 @@ group {
 	    }
 	 }
       }
+      
+      part {
+            name: "e.swallow.bar";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1 {
+                  to_x: "sld_base";
+                  to_y: "e.dragable.slider";
+                  offset: 5 0;
+               }
+               rel2 {
+                  to_x: "sld_base";
+                  to_y: "e.dragable.slider";
+                  offset: -6 -1;
+               }
+            }
+         }
+         
       part {
 	 name: "e.dragable.slider";
 	 type: RECT;
