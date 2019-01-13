@@ -817,8 +817,8 @@ group {
 				rel2.to_y: "e.text.label";
 				rel1.relative:  1.0 0.0;
 				rel2.relative:  1.0 1.0;
-				rel1.offset:   6 -8;
-				rel2.offset:   -6 -10;
+				rel1.offset:   6 -11;
+				rel2.offset:   -6 -14;
 				color: 255 255 255 255;
                 color2: 255 255 255 128;
                 //~ color_class: "menu_item";
