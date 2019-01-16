@@ -783,12 +783,11 @@ group {
 				rel2.to_x: "clip";
 				rel1.relative:  1.0 0.33;
 				rel2.relative:  1.0 1.0;
-				rel1.offset:   6 0;
-				rel2.offset:   -6 -1;
+				rel1.offset:   4 0;
+				rel2.offset:   -6 -4;
 				color: 255 255 255 255;
-                color2: 0 0 0 128;
-                //~ color_class: "menu_item";
-                text { font: FNBD; size: 10;
+                color3: 165 42 42 128;
+                text { font: "Edje-Vera"; size: 10;
                        min: 0 1;
                        align: 0.0 1.0;
                        text_class: "menu_item";
@@ -803,7 +802,7 @@ group {
 		part {
 			name: "e.text.plugin";
 			type: TEXT;
-			effect: FAR_SOFT_SHADOW;
+			effect: NONE;
 			scale: 1;
 			mouse_events: 0;
 			clip_to: "clip";
@@ -817,15 +816,16 @@ group {
 				rel2.to_y: "e.text.label";
 				rel1.relative:  1.0 0.0;
 				rel2.relative:  1.0 1.0;
-				rel1.offset:   6 -11;
+				rel1.offset:   6 -7;
 				rel2.offset:   -6 -14;
-				color: 255 255 255 255;
-                color2: 255 255 255 128;
+				color: 51 51 51 255;
+                //~ color2: 46 52 54 0;
+                //~ color3: 46 52 54 0;
                 //~ color_class: "menu_item";
-                text { font: FNBD; size: 12;
+                text { font: "Edje-Vera-Bold"; size: 12;
                        min: 0 1;
                        align: 0.0 0.0;
-                       text_class: "menu_item";
+                       //~ text_class: "fileman_popup_title";
                      }
 			}
 			description {
