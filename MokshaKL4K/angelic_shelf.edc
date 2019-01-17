@@ -205,11 +205,11 @@ group {
 	    state:    "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   18   2;
+	       offset:   -5   2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -19   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -217,11 +217,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2    2;
+	       offset:   -5    2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -19   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -229,11 +229,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   18   2;
+	       offset:   -5   2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -241,11 +241,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   18   2;
+	       offset:   -5   2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -19   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -253,11 +253,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2   2;
+	       offset:   -5   2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -19   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -265,11 +265,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   18   2;
+	       offset:   -5   2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -3;
+	       offset:   -5   -3;
 	    }
 	 }
 	 description {
@@ -277,11 +277,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2    18;
+	       offset:   2    -5;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -19;
+	       offset:   -3   -5;
 	    }
 	 }
 	 description {
@@ -293,7 +293,7 @@ group {
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -19;
+	       offset:   -3   0;
 	    }
 	 }
 	 description {
@@ -301,7 +301,7 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2    18;
+	       offset:   2    0;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
@@ -313,11 +313,11 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2    18;
+	       offset:   2    -5;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -19;
+	       offset:   -3   -5;
 	    }
 	 }
 	 description {
@@ -329,7 +329,7 @@ group {
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -3   -19;
+	       offset:   -3   0;
 	    }
 	 }
 	 description {
@@ -337,7 +337,7 @@ group {
 	    inherit:  "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   2    18;
+	       offset:   2    0;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;

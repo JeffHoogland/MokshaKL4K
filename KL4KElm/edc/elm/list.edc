@@ -96,7 +96,7 @@
 group { name: "elm/list/item/default";
    data.item: "selectraise" "on";
    data.item: "focusraise" "on";
- 
+
    parts {
       part { name: "event"; type: RECT;
          description { state: "default" 0.0;
@@ -109,7 +109,7 @@ group { name: "elm/list/item/default";
       }
       CLIP_SWITCH("base","base","base","default","selected")
       part { name: "base"; type: RECT; mouse_events: 0;
-		  clip_to: "base_clip_default";
+        clip_to: "base_clip_default";
          description { state: "default" 0.0;
             color_class: "ilist_item_base";
          }
@@ -118,20 +118,20 @@ group { name: "elm/list/item/default";
          }
       }
       part { name: "base_sel"; type: RECT; mouse_events: 0;
-		clip_to: "base_clip_selected";
-		description { state: "default" 0.0;
-			STAY_ON("base")
-			color_class: "focus";
-		}
-	  }
-	  part { name: "base_sel_SH"; mouse_events: 0;
-		clip_to: "base_clip_selected";
-		description { state: "default" 0.0;
-			STAY_ON("base_sel")
-			image.normal: "img/ilist_sel_SH.png";
-			image.border: 0 0 9 9;
-		}
-	  }
+      clip_to: "base_clip_selected";
+      description { state: "default" 0.0;
+         STAY_ON("base")
+         color_class: "focus";
+      }
+     }
+     part { name: "base_sel_SH"; mouse_events: 0;
+      clip_to: "base_clip_selected";
+      description { state: "default" 0.0;
+         STAY_ON("base_sel")
+         image.normal: "img/ilist_sel_SH.png";
+         image.border: 0 0 9 9;
+      }
+     }
       program {
          signal: "elm,state,odd"; source: "elm";
          action: STATE_SET "odd" 1.0;
@@ -341,10 +341,10 @@ group { name: "elm/list/h_item/default";
             visible: 0;
          }
       }
-      
+
       CLIP_SWITCH("base","base","base","default","selected")
       part { name: "base"; type: RECT; mouse_events: 0;
-		  clip_to: "base_clip_default";
+        clip_to: "base_clip_default";
          description { state: "default" 0.0;
             color_class: "ilist_item_base";
          }
@@ -353,20 +353,20 @@ group { name: "elm/list/h_item/default";
          }
       }
       part { name: "base_sel"; type: RECT; mouse_events: 0;
-		clip_to: "base_clip_selected";
-		description { state: "default" 0.0;
-			STAY_ON("base")
-			color_class: "focus";
-		}
-	  }
-	  part { name: "base_sel_SH"; mouse_events: 0;
-		clip_to: "base_clip_selected";
-		description { state: "default" 0.0;
-			STAY_ON("base_sel")
-			image.normal: "img/ilist_sel_SH.png";
-			image.border: 0 0 9 9;
-		}
-	  }
+      clip_to: "base_clip_selected";
+      description { state: "default" 0.0;
+         STAY_ON("base")
+         color_class: "focus";
+      }
+     }
+     part { name: "base_sel_SH"; mouse_events: 0;
+      clip_to: "base_clip_selected";
+      description { state: "default" 0.0;
+         STAY_ON("base_sel")
+         image.normal: "img/ilist_sel_SH.png";
+         image.border: 0 0 9 9;
+      }
+     }
       program {
          signal: "elm,state,odd"; source: "elm";
          action: STATE_SET "odd" 1.0;

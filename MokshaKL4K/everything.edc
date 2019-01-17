@@ -172,10 +172,11 @@ group { name: "e/modules/everything/list";
             color: 51 51 51 255;
             color3: 255 255 255 0;
             text {
-               font: "Sans:style=Bold";
+               font: "Sans";
                size: 11;
                align: 0.0 0.5;
                min: 1 1;
+               ellipsis: -1;
                text_class: "fileman_typebuf";
             }
          }
@@ -428,27 +429,494 @@ group { name: "e/modules/everything/list";
    }
 }
 
-//Main Window
-group { name: "e/modules/everything/main";
-	//data.item: "shaped" "1";
-	data.item: "argb" "1";
-   parts {
-		part { name: "main_window";
+group {
+	name: "e/modules/everything/main";
+	images.image: "images/menu_im0.png" COMP;;
+#if (EVRY_TRANSPARENT == 1)
+	data{
+		item: "shaped" "1";
+	}
+#endif
+	parts {
+
+		part {
+			name: "frame";
+			mouse_events: 0;
 			description { state: "default" 0.0;
 				SURFACE;
 			}
 		}
-      part {
-         name: "list";
-         source: "e/modules/everything/list";
-         type: GROUP;
-         description {
-            state: "default" 0.0;
-            visible: 1;
+
+
+		part {
+			name: "win";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 128;
+				rel2.relative: 1.0 0.0;
+				rel1.offset:  1 1;
+				rel2.offset: -2 48;
+				color_class: "dialog_base";
+			}
+		}
+
+		part {
+			name: "list";
+			source: "e/modules/everything/list";
+			type: GROUP;
+			description {
+				state: "default" 0.0;
+				visible: 1;
 				color: 221 75 57 100;
-            min: 300 155;
-         }
-      }
+				min: 300 155;
+				rel1 {
+					to_y: "win";
+					offset: 1 -1;
+					relative: 0.0 1.0;
+				}
+				rel2 {
+					offset: -2 -2;
+				}
+			}
+		}
+
+		part {
+			name: "separator";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 75;
+				rel1.to: "win";
+				rel2.to: "win";
+				rel1.relative: 0.0 1.0;
+				rel1.offset: 0 -2;
+				rel2.offset: -1 -2;
+			}
+		}
+
+		part {
+			name: "separator2";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 148;
+				rel1.to: "win";
+				rel2.to: "win";
+				rel1.relative: 0.0 1.0;
+				rel1.offset: 0 -1;
+				color_class: "dialog_base";
+			}
+		}
+
+		part {
+			name: "selector_frame";
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				rel1.to: "win";
+				rel2.to: "win";
+			}
+		}
+
+		part {
+			name: "subject_selector";
+			type: GROUP;
+			source: "e/modules/everything/selector_item";
+			clip_to: "selector_frame";
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.0 0.0;
+				rel1.to: "selector_frame";
+				rel2.relative: 0.5 1.0;
+				rel2.to_y: "selector_frame";
+			}
+			description {
+				state: "wide" 0;
+				inherit: "default" 0.0;
+				visible: 0;
+				rel1.relative: -0.5 0.0;
+				rel2.relative: 0.0 1.0;
+			}
+		}
+
+		part {
+			name: "action_selector";
+			type: GROUP;
+			source: "e/modules/everything/selector_item";
+			clip_to: "selector_frame";
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.5 0.0;
+				rel1.to: "selector_frame";
+				rel2.relative: 1.0 1.0;
+				rel1.offset: -1 0;
+				rel2.to: "selector_frame";
+			}
+			description {
+				state: "wide" 0;
+				inherit: "default" 0.0;
+				rel1.relative: 0.0 0.0;
+				rel2.relative: 0.5 1.0;
+			}
+		}
+
+		part {
+			name: "object_selector";
+			type: GROUP;
+			source: "e/modules/everything/selector_item";
+			clip_to: "selector_frame";
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1.relative: 1.0 0.0;
+				rel1.to: "selector_frame";
+				rel2.relative: 1.5 1.0;
+				rel2.to: "selector_frame";
+			}
+			description {
+				state: "wide" 0;
+				inherit: "default" 0.0;
+				visible: 1;
+				rel1.relative: 0.5 0.0;
+				rel2.relative: 1.0 1.0;
+			}
+		}
+
+		/* part {
+		 *     name: "selector_over2";
+		 *     mouse_events: 0;
+		 *     description {
+		 *         state: "default" 0.0;
+		 *         color: 255 255 255 90;
+		 *         rel1.to: "selector_frame";
+		 *         rel2.to: "selector_frame";
+		 *         image {
+		 *             normal: "images/bevel_under.png";
+		 *         }
+		 *     }
+		 * } */
+
+		part {
+			name: "selector_over1";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 100;
+				rel1.to: "selector_frame";
+				rel2.to: "selector_frame";
+				image {
+					normal: "images/bevel_over.png";
+				}
+			}
+		}
+
+		part {
+			name: "top";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 110;
+				rel1.to: "win";
+				rel2.to: "win";
+				rel1.relative: 0.0 0.0;
+				rel2.relative: 1.0 0.0;
+				rel1.offset: 0 0;
+				rel2.offset: -1 0;
+			}
+		}
+
+		part {
+			name: "bg_frame";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 128;
+				image {
+					normal: "images/bevel_over.png";
+					border: 1 1 1 1;
+					middle: 0;
+				}
+				color_class: "dialog_base";
+			}
+		}
+	}
+	programs {
+		program {
+			name: "object_selector_hide";
+			signal: "e,state,object_selector_hide";
+			source: "e";
+			action: STATE_SET "default" 0.00;
+			transition: SINUSOIDAL 0.15;
+			target: "object_selector";
+			target: "subject_selector";
+			target: "action_selector";
+		}
+		program {
+			name: "object_selector_show";
+			signal: "e,state,object_selector_show";
+			source: "e";
+			action: STATE_SET "wide" 0.00;
+			transition: SINUSOIDAL 0.2;
+			target: "object_selector";
+			target: "subject_selector";
+			target: "action_selector";
+		}
+	}
+}
+
+group {
+	name: "e/modules/everything/selector_item";
+	images.image: "images/bevel_over.png" COMP;
+	parts {
+
+		part {
+			name: "clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+			}
+		}
+
+		part {
+			name: "bg";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 190 190 190 0;
+				color_class: "dialog_base";
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+				color: 205 205 205 50;
+			}
+		}
+
+		part {
+			name: "separator";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 60;
+				rel1.relative: 1.0 0.0;
+				rel2.offset: 0 -2;
+				/* rel2.offset: -1 -2; */
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+				color: 0 0 0 65;
+			}
+		}
+
+		part {
+			name: "icon_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1.offset: 4 1;
+				align: 0.0 0.5;
+				min: 44 44;
+				max: 44 44;
+				fixed: 1 1;
+				color: 235 235 235 255;
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part {
+			name: "e.swallow.icons";
+			type: SWALLOW;
+			clip_to: "icon_clip";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				aspect: 1.0 1.0;
+				align: 0.5 0.5;
+				aspect_preference: BOTH;
+				rel1.to: "icon_clip";
+				rel2.to: "icon_clip";
+			}
+		}
+
+		part {
+			name: "e.swallow.thumb";
+			type: SWALLOW;
+			clip_to: "icon_clip";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				aspect: 1.0 1.0;
+				align: 0.5 0.5;
+				aspect_preference: BOTH;
+				rel1.to: "icon_clip";
+				rel2.to: "icon_clip";
+			}
+		}
+
+		part {
+			name: "e.text.label";
+			type: TEXT;
+			effect: SOFT_SHADOW;
+			scale: 1;
+			mouse_events: 0;
+			clip_to: "clip";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				rel1.to_x: "e.swallow.icons";
+				rel2.to_x: "clip";
+				rel1.relative:  1.0 0.33;
+				rel2.relative:  1.0 1.0;
+				rel1.offset:   4 0;
+				rel2.offset:   -6 -4;
+				color: 255 255 255 255;
+                color3: 165 42 42 128;
+                text { font: "Edje-Vera"; size: 10;
+                       min: 0 1;
+                       align: 0.0 1.0;
+                       text_class: "menu_item";
+                     }
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+			}
+		}
+
+		part {
+			name: "e.text.plugin";
+			type: TEXT;
+			effect: NONE;
+			scale: 1;
+			mouse_events: 0;
+			clip_to: "clip";
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.0;
+				fixed: 0 1;
+				rel1.to_x: "e.swallow.icons";
+				rel2.to_x: "clip";
+				rel1.to_y: "e.text.label";
+				rel2.to_y: "e.text.label";
+				rel1.relative:  1.0 0.0;
+				rel2.relative:  1.0 1.0;
+				rel1.offset:   6 -7;
+				rel2.offset:   -6 -14;
+				color: 51 51 51 255;
+                //~ color2: 46 52 54 0;
+                //~ color3: 46 52 54 0;
+                //~ color_class: "menu_item";
+                text { font: "Edje-Vera-Bold"; size: 12;
+                       min: 0 1;
+                       align: 0.0 0.0;
+                       //~ text_class: "fileman_popup_title";
+                     }
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+			}
+		}
+
+		part {
+			name: "over";
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 150;
+				rel2.offset: -3 -1;
+				visible: 0;
+				image {
+					normal: "images/bevel_over.png";
+				}
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+				/* visible: 1; */
+			}
+		}
+
+
+		part {
+			name: "event";
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+			}
+		}
+	}
+	programs {
+		program {
+			name: "sel";
+			signal: "e,state,selected";
+			source: "e";
+			action: STATE_SET "selected" 0.0;
+			target: "bg";
+			/* target: "separator";
+			 * target: "over"; */
+			target: "e.text.label";
+			target: "e.text.plugin";
+			target: "icon_clip";
+		}
+		program {
+			name: "unsel";
+			signal: "e,state,unselected";
+			source: "e";
+			action: STATE_SET "default" 0.0;
+			target: "bg";
+			/* target: "separator";
+			 * target: "over"; */
+			target: "e.text.label";
+			target: "e.text.plugin";
+			target: "icon_clip";
+		}
+		program {
+		    name: "update";
+		    signal: "e,signal,update";
+		    source: "e";
+		    action: STATE_SET "faded" 0.0;
+		    transition: DECELERATE 0.1;
+		    target: "icon_clip";
+		    after: "show_icon";
+		}
+		program {
+		    name: "show_icon";
+		    action: STATE_SET "default" 0.0;
+		    transition: ACCELERATE 0.3;
+		    target: "icon_clip";
+		}
+		program {
+		    name: "thumb_show";
+		    signal: "e,action,thumb,show";
+		    source: "e";
+		    action: STATE_SET "faded" 0.0;
+		    target: "icon_clip";
+		    after: "thumb_show2";
+		}
+		program {
+		    name: "thumb_show2";
+		    action: STATE_SET "default" 0.0;
+		    transition: SINUSOIDAL 0.2;
+		    target: "icon_clip";
+		}
 	}
 }
 
@@ -512,13 +980,13 @@ group { name: "e/modules/everything/thumbview/item/thumb";
             state: "default" 0.0;
             rel1 {
                to: "base";
-               relative: 0.0 0.0;
-               offset: 4   0;
+               relative: 0.1 0.1;
+               offset: 0   0;
             }
             rel2 {
                to: "base";
-               relative: 1.0 1.0;
-               offset: -3  -11;
+               relative: 0.9 0.9;
+               offset: 0  -11;
             }
          }
       }
@@ -580,7 +1048,7 @@ group { name: "e/modules/everything/thumbview/item/thumb";
          description {
             state: "default" 0.0;
             rel1 {
-               offset: 2 -12;
+               offset: 2 -20;
                relative: 0.0 1.0;
             }
             rel2.offset: -2 -4;
@@ -598,12 +1066,12 @@ group { name: "e/modules/everything/thumbview/item/thumb";
             state: "selected" 0.0;
        inherit: "default" 0.0;
             rel1 {
-               offset: 2 -12;
+               offset: 2 -20;
                relative: 0.0 1.0;
             }
             rel2.offset: -2 -4;
             color: 51 51 51 255;
-            color3: 20 20 20 0;
+            color2: 20 20 20 0;
          }
       }
       

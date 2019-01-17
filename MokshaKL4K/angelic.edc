@@ -42,7 +42,7 @@ spectra {
 data
  {
    item: "theme/name"     "KL4K";
-   item: "gtk-theme" "Ambiance";
+   item: "gtk-theme" "MokshaKL4K-GTK";
    item: "theme/version"  "V-2";
    item: "theme/author"   "Agustin J Verdegal T.";
    item: "theme/license"  "Theme: Custom;Font: Bitstream Vera fonts";
