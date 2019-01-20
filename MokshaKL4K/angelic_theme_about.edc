@@ -25,16 +25,16 @@ styles
 
 group {
    name: "e/theme/about";
-   min: 400 160;
-   max: 400 160;
+   min: 400 180;
+   max: 400 180;
    parts {
       part {
 	 name:          "sky";
 	 mouse_events:  0;
 	 description {
 	    state:    "default" 0.0;
-	    min:      400 160;
-	    max:      400 160;
+	    min:      400 180;
+	    max:      400 180;
 	    align:    0.5 1.0;
 	    fixed:    1 1;
 	    rel1 {
@@ -135,8 +135,9 @@ group {
 " <hilight>KL4K</hilight> for Enlightenment<br> "
 "Inspired by '+1' by nale12.<br>"
 "Based on 'Angelic' by<br>" 
-"Agustin J Verdegal T. Wallpaper by <hilight>LKJ</hilight>.<br>"
+"Agustin J Verdegal T. Wallpaper taken from Angelic theme.<br>"
 "Thanks to Alberto '<hilight>Duma</hilight>' Verdoja.<br>"
+"Moksha port by '<hilight>Štefan Uram</hilight>'<br>"
 "<br>Realized by <hilight>lostbumpkin</hilight>.<br>";
 	    }
 	 }
