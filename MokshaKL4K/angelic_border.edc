@@ -121,6 +121,7 @@ group { name: "e/widgets/border/default/border";
                }
             }
 		}
+		
 		part { name: "title_base"; type: RECT;
             mouse_events: 0;
             description {
@@ -267,6 +268,8 @@ part { name: "icon"; type: SPACER;
 				image.normal: "winbt/minimize_focused_pressed.png";
 			}
         }
+        
+        
         //EVENTS  
 		part { name: "e.event.titlebar"; type: RECT;
 			 description { state: "default" 0.0;
@@ -292,8 +295,10 @@ part { name: "icon"; type: SPACER;
          description { state: "default" 0.0;
             rel1.relative: 0.0 1.0;
             rel1.to_y: "titlebar";
+            rel1.offset: 1 0;
             rel2.relative: 1.0 0.0;
             rel2.to_y: "bottom";
+            rel2.offset: -2 0;
          }
          description { state: "shaded" 0.0;
             inherit: "default" 0.0;
@@ -346,7 +351,53 @@ part { name: "icon"; type: SPACER;
          }
       }
       
-      
+         part { name: "left"; type: RECT; mouse_events: 0;
+			description { state: "default" 0.0;
+            rel1.relative: 0.0 0.0;
+            rel1.offset: 0 25;
+            rel2.relative: 0.0 1.0;
+            rel2.offset:  1 0;
+            color: 220 220 220 200;
+            min: 1 9999;
+         }
+	 }
+	 
+	    part { name: "left_up"; type: RECT; mouse_events: 0;
+			description { state: "default" 0.0;
+            rel1.relative: 0.0 0.0;
+            rel1.offset: 0 0;
+            rel2.relative: 0.0 0.0;
+            rel2.offset:  1 25;
+            color: 45 45 45 255;
+            min: 1 25;
+            max : 2 25;
+         }
+	 }
+	 
+	 
+	 
+	    part { name: "right"; type: RECT; mouse_events: 0;
+			description { state: "default" 0.0;
+            rel1.relative: 1.0 0.0;
+            rel1.offset: 0 0;
+            rel2.relative: 1.0 1.0;
+            rel2.offset:  -1 0;
+            color: 220 220 220 200;
+            min: 1 9999;
+         }
+	 }
+	  part { name: "right_up"; type: RECT; mouse_events: 0;
+			description { state: "default" 0.0;
+            rel1.relative: 1.0 0.0;
+            rel1.offset: 0 0;
+            rel2.relative: 1.0 0.0;
+            rel2.offset:  -1 25;
+            color: 45 45 45 255;
+            min: 1 25;
+            max: 1 25;
+         }
+	 }
+	 
 		
 		WIN_BT_EVENTS("close")
 		WIN_BT_EVENTS("maximize")
