@@ -79,19 +79,21 @@ group {
 	    rel1 {
 	       relative: 1.0  0.0;
 	       to_x:     "temp";
+	       offset: -3 0;
 	    }
 	    rel2 {
 	       relative: 1.0  0.0;
 	    }
-	    color: 51 51 51 255;
+	    color: 201 201 201 255;
 	    color3: 46 52 54 0;
 	    color_class: "module_label";
             text {
 	       text:     "99^C";
 	       font:     "Edje-Vera";
-	       size:     7;
+	       size:     8;
 	       min:      1 1;
 	       align:    0.0 0.0;
+	       ellipsis: -1;
                text_class: "module_small";	       
 	    }
 	 }

@@ -498,6 +498,7 @@ group {
          size:     10;
          min:      1 1;
          align:    0.0 0.5;
+         ellipsis: -1;
          text_class: "ilist_item";
       }
    }
@@ -1174,6 +1175,7 @@ group {
          size:     10;
          min:      1 1;
          align:    0.0 0.5;
+         ellipsis: -1;
          text_class: "ilist_item";
       }
    }
@@ -3099,7 +3101,7 @@ group {
          font:     "Edje-Vera";
          min:      0 1;
          align:    0.5 1.0;
-         elipsis:  0.0;
+         ellipsis: -1;
          text_class: "fileman_icon";
       }
    }
@@ -3420,7 +3422,7 @@ group {
          font:     "Edje-Vera";
          min:      1 1;
          align:    0.5 1.0;
-         elipsis:  0.0;
+         ellipsis: -1;
          text_class: "fileman_icon";
       }
    }
@@ -3549,7 +3551,7 @@ group {
          size: 10;
          min:  0 0;
          align: 0.5 0.5;
-         elipsis: 1.0;
+         ellipsis: -1;
          text_class: "fileman_typebuf";
       }
    }
@@ -6340,7 +6342,7 @@ group {
          font:     "Edje-Vera-Bold";
          min:      0 1;
          align:    0.5 1.0;
-         elipsis:  0.0;
+         ellipsis: -1;
          text_class: "desktop_fileman_icon";
       }
    }
@@ -6661,7 +6663,7 @@ group {
          font:     "Edje-Vera-Bold";
          min:      0 1;
          align:    0.5 1.0;
-         elipsis:  0.0;
+         ellipsis: -1;
          text_class: "desktop_fileman_icon";
       }
    }
