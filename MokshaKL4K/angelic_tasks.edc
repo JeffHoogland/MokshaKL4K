@@ -177,7 +177,7 @@ group { name:"e/modules/tasks/item";
          action: STATE_SET "clicked" 0.0;
          target: "base";
          target: "sel_base";
-         target: "e.text.label";
+         //~ target: "e.text.label";
          target: "sel_label";
       }
       program {

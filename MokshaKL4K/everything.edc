@@ -334,13 +334,13 @@ group { name: "e/modules/everything/list";
       }
    }
    programs {
-     program {
-         name: "show_list";
-         signal: "e,state,list_show";
-         source: "e";
-         action: STATE_SET "visible" 0.0;
-         target: "base";
-      }
+     //~ program {
+         //~ name: "show_list";
+         //~ signal: "e,state,list_show";
+         //~ source: "e";
+         //~ action: STATE_SET "visible" 0.0;
+         //~ target: "base";
+      //~ }
       program {
          name: "hide_list";
          signal: "e,state,list_hide";
@@ -349,13 +349,13 @@ group { name: "e/modules/everything/list";
          transition: ACCELERATE 0.08;
          target: "base";
       }
-      program {
-         name: "show_entry";
-         signal: "e,state,entry_show";
-         source: "e";
-         action: STATE_SET "visible" 0.0;
-         target: "input_base";
-      }
+      //~ program {
+         //~ name: "show_entry";
+         //~ signal: "e,state,entry_show";
+         //~ source: "e";
+         //~ action: STATE_SET "visible" 0.0;
+         //~ target: "input_base";
+      //~ }
       program {
          name: "hide_entry";
          signal: "e,state,entry_hide";
@@ -888,29 +888,29 @@ group {
 			target: "e.text.plugin";
 			target: "icon_clip";
 		}
-		program {
-		    name: "update";
-		    signal: "e,signal,update";
-		    source: "e";
-		    action: STATE_SET "faded" 0.0;
-		    transition: DECELERATE 0.1;
-		    target: "icon_clip";
-		    after: "show_icon";
-		}
+		//~ program {
+		    //~ name: "update";
+		    //~ signal: "e,signal,update";
+		    //~ source: "e";
+		    //~ action: STATE_SET "faded" 0.0;
+		    //~ transition: DECELERATE 0.1;
+		    //~ target: "icon_clip";
+		    //~ after: "show_icon";
+		//~ }
 		program {
 		    name: "show_icon";
 		    action: STATE_SET "default" 0.0;
 		    transition: ACCELERATE 0.3;
 		    target: "icon_clip";
 		}
-		program {
-		    name: "thumb_show";
-		    signal: "e,action,thumb,show";
-		    source: "e";
-		    action: STATE_SET "faded" 0.0;
-		    target: "icon_clip";
-		    after: "thumb_show2";
-		}
+		//~ program {
+		    //~ name: "thumb_show";
+		    //~ signal: "e,action,thumb,show";
+		    //~ source: "e";
+		    //~ action: STATE_SET "faded" 0.0;
+		    //~ target: "icon_clip";
+		    //~ after: "thumb_show2";
+		//~ }
 		program {
 		    name: "thumb_show2";
 		    action: STATE_SET "default" 0.0;

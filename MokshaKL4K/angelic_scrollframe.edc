@@ -887,14 +887,14 @@ group {
                     target: "e.dragable.hbar";
                 }
                
-                  program {
-                  name: "sb_hbar_in";
-                  signal: "mouse,in";
-                  source: "e.dragable.hbar";
-                  action:  STATE_SET "hilited" 0.0;
-                  target: "e.dragable.hbar";
-              //    target: "hbar_stipple";
-                  }
+                  //~ program {
+                  //~ name: "sb_hbar_in";
+                  //~ signal: "mouse,in";
+                  //~ source: "e.dragable.hbar";
+                  //~ action:  STATE_SET "hilited" 0.0;
+                  //~ target: "e.dragable.hbar";
+              //~ //    target: "hbar_stipple";
+                  //~ }
                   program {
                   name: "sb_hbar_out";
                   signal: "mouse,out";

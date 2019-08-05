@@ -444,7 +444,7 @@ part { name: "icon"; type: SPACER;
          action: STATE_SET "shaded" 0.0;
          target: "bottom";
          target: "bevel2";
-         target: "e.text.title";
+         //~ target: "e.text.title";
       }
       program {
          signal: "e,state,unshaded";
@@ -452,7 +452,7 @@ part { name: "icon"; type: SPACER;
          action: STATE_SET "default" 0.0;
          target: "bottom";
          target: "bevel2";
-         target: "e.text.title";
+         //~ target: "e.text.title";
       }
 	}
 }

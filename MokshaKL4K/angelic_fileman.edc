@@ -109,13 +109,11 @@ group {
       program {
          signal: "e,toolbar,left"; source: "e";
          action: STATE_SET "tb_left" 0.0;
-         target: "e.swallow.toolbar";
          target: "region";
       }
       program {
          signal: "e,toolbar,right"; source: "e";
          action: STATE_SET "tb_right" 0.0;
-         target: "e.swallow.toolbar";
          target: "region";
       }
       program {
@@ -3122,7 +3120,7 @@ group {
    signal: "e,state,selected";
    source: "e";
    action: STATE_SET "active" 0.0;
-   target: "e.text.label";
+   //~ target: "e.text.label";
    target: "icon_overlay";
       }
       program {
@@ -3132,7 +3130,7 @@ group {
    action: STATE_SET "default" 0.0;
    transition: LINEAR 0.2;
    target: "e.text.label";
-         target: "icon_overlay";
+   target: "icon_overlay";
       }
       program {
    name:    "thumb_gen";
@@ -3443,7 +3441,7 @@ group {
    signal: "e,state,selected";
    source: "e";
    action: STATE_SET "active" 0.0;
-   target: "e.text.label";
+   //~ target: "e.text.label";
    target: "icon_overlay";
       }
       program {
@@ -6363,7 +6361,7 @@ group {
    signal: "e,state,selected";
    source: "e";
    action: STATE_SET "active" 0.0;
-   target: "e.text.label";
+   //~ target: "e.text.label";
    target: "icon_overlay";
       }
       program {
@@ -6684,7 +6682,7 @@ group {
    signal: "e,state,selected";
    source: "e";
    action: STATE_SET "active" 0.0;
-   target: "e.text.label";
+   //~ target: "e.text.label";
    target: "icon_overlay";
       }
       program {
