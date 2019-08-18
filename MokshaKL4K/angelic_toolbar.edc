@@ -135,11 +135,11 @@
 				action: ACTION_STOP;
 				target: "arrow1_repeat";
 			} 
-			program {
-				signal: "mouse,down,1*"; source: "left_arrow";
-				action: STATE_SET "clicked" 0.0;
-				target: "left_arrow";
-			}
+			//~ program {
+				//~ signal: "mouse,down,1*"; source: "left_arrow";
+				//~ action: STATE_SET "clicked" 0.0;
+				//~ target: "left_arrow";
+			//~ }
 			program {
 				signal: "mouse,up,1"; source: "left_arrow";
 				action: STATE_SET "default" 0.0;
@@ -164,11 +164,11 @@
 				action: ACTION_STOP;
 				target: "arrow2_repeat";
 			} 
-			program {
-				signal: "mouse,down,1*"; source: "right_arrow";
-				action: STATE_SET "clicked" 0.0;
-				target: "right_arrow";
-			}
+			//~ program {
+				//~ signal: "mouse,down,1*"; source: "right_arrow";
+				//~ action: STATE_SET "clicked" 0.0;
+				//~ target: "right_arrow";
+			//~ }
 			program {
 				signal: "mouse,up,1"; source: "right_arrow";
 				action: STATE_SET "default" 0.0;
