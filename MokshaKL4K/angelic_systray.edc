@@ -29,9 +29,13 @@ group {                       \
             mouse_events: 0;            \
             description {             \
                state: "default" 0.0;        \
-               color: 0 0 0 0;            \
-               rel1.to: "e.box";          \
-               rel2.to: "e.box";          \
+               rel1.offset: 10 0;          \
+               rel2.offset: -10 -1;          \
+            }                   \
+            description {             \
+               state: "vertical" 0.0;        \
+               rel1.offset: 1 8;          \
+               rel2.offset: -1 -8;          \
             }                   \
          }                      \
          part {                   \
@@ -39,24 +43,20 @@ group {                       \
             type: BOX;                \
             description {             \
                state: "default" 0.0;        \
-               rel1.offset: 3 2;          \
-               rel2.offset: -4 -3;          \
+               rel1.to: "e.size";   \
+               rel2.to: "e.size";      \
                box {                \
                   layout: "horizontal";       \
-                  padding: 1 0;           \
+                  padding: 2 0;           \
                   align: 0.5 0.5;         \
-                  min: 1 0;             \
+                  min: 1 1;             \
                }                  \
             }                   \
             description {             \
                state: "vertical" 0.0;       \
-               rel1.offset: 3 2;          \
-               rel2.offset: -4 -3;          \
                box {                \
                   layout: "vertical";       \
-                  padding: 0 1;           \
-                  align: 0.5 0.5;         \
-                  min: 0 1;             \
+                  padding: 0 2;           \
                }                  \
             }                   \
          }                      \
