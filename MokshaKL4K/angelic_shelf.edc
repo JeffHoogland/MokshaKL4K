@@ -205,246 +205,248 @@ group {
 	    state:    "default" 0.0;
 	    rel1 {
 	       relative: 0.0  0.0;
-	       offset:   -5   2;
+	       offset:   0 2;
 	    }
 	    rel2 {
 	       relative: 1.0  1.0;
-	       offset:   -5   -3;
+	       offset:   0 0;
 	    }
 	 }
-	 description {
-	    state:    "top_left" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   -5    2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -5   -3;
-	    }
-	 }
-	 description {
-	    state:    "top_right" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   -5   2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -5   -3;
-	    }
-	 }
-	 description {
-	    state:    "bottom" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   -5   2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -5   -3;
-	    }
-	 }
-	 description {
-	    state:    "bottom_left" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   -5   2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -5   -3;
-	    }
-	 }
-	 description {
-	    state:    "bottom_right" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   -5   2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -5   -3;
-	    }
-	 }
-	 description {
-	    state:    "left" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    -5;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   -5;
-	    }
-	 }
-	 description {
-	    state:    "left_top" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   0;
-	    }
-	 }
-	 description {
-	    state:    "left_bottom" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    0;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   -3;
-	    }
-	 }
-	 description {
-	    state:    "right" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    -5;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   -5;
-	    }
-	 }
-	 description {
-	    state:    "right_top" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    2;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   0;
-	    }
-	 }
-	 description {
-	    state:    "right_bottom" 0.0;
-	    inherit:  "default" 0.0;
-	    rel1 {
-	       relative: 0.0  0.0;
-	       offset:   2    0;
-	    }
-	    rel2 {
-	       relative: 1.0  1.0;
-	       offset:   -3   -3;
-	    }
-	 }
-      }
-   }
-   programs {
+	 //~ description {
+	    //~ state:    "top_left" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   -5    2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -5   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "top_right" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   -5   2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -5   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "bottom" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   -5   2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -5   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "bottom_left" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   -5   2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -5   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "bottom_right" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   -5   2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -5   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "left" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    -5;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   -5;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "left_top" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   0;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "left_bottom" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    0;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   -3;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "right" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    -5;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   -5;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "right_top" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    2;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   0;
+	    //~ }
+	 //~ }
+	 //~ description {
+	    //~ state:    "right_bottom" 0.0;
+	    //~ inherit:  "default" 0.0;
+	    //~ rel1 {
+	       //~ relative: 0.0  0.0;
+	       //~ offset:   2    0;
+	    //~ }
+	    //~ rel2 {
+	       //~ relative: 1.0  1.0;
+	       //~ offset:   -3   -3;
+	    //~ }
+	 //~ }
+      //~ }
+   //~ }
+   //~ programs {
 
-      program {
-	 name:    "orient1";
-	 signal:  "e,state,orientation,top";
-	 source:  "e";
-	 action:  STATE_SET "default" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient2";
-	 signal:  "e,state,orientation,top_left";
-	 source:  "e";
-	 action:  STATE_SET "top_left" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient3";
-	 signal:  "e,state,orientation,top_right";
-	 source:  "e";
-	 action:  STATE_SET "top_right" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient4";
-	 signal:  "e,state,orientation,bottom";
-	 source:  "e";
-	 action:  STATE_SET "bottom" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient5";
-	 signal:  "e,state,orientation,bottom_left";
-	 source:  "e";
-	 action:  STATE_SET "bottom_left" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient6";
-	 signal:  "e,state,orientation,bottom_right";
-	 source:  "e";
-	 action:  STATE_SET "bottom_right" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient7";
-	 signal:  "e,state,orientation,left";
-	 source:  "e";
-	 action:  STATE_SET "left" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient8";
-	 signal:  "e,state,orientation,left_top";
-	 source:  "e";
-	 action:  STATE_SET "left_top" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient9";
-	 signal:  "e,state,orientation,left_bottom";
-	 source:  "e";
-	 action:  STATE_SET "left_bottom" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient10";
-	 signal:  "e,state,orientation,right";
-	 source:  "e";
-	 action:  STATE_SET "right" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient11";
-	 signal:  "e,state,orientation,right_top";
-	 source:  "e";
-	 action:  STATE_SET "right_top" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-      program {
-	 name:    "orient12";
-	 signal:  "e,state,orientation,right_bottom";
-	 source:  "e";
-	 action:  STATE_SET "right_bottom" 0.0;
-	 target:  "base";
-	 target:  "e.swallow.content";
-      }
-   }
+      //~ program {
+	 //~ name:    "orient1";
+	 //~ signal:  "e,state,orientation,top";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "default" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient2";
+	 //~ signal:  "e,state,orientation,top_left";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "top_left" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient3";
+	 //~ signal:  "e,state,orientation,top_right";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "top_right" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient4";
+	 //~ signal:  "e,state,orientation,bottom";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "bottom" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient5";
+	 //~ signal:  "e,state,orientation,bottom_left";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "bottom_left" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient6";
+	 //~ signal:  "e,state,orientation,bottom_right";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "bottom_right" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient7";
+	 //~ signal:  "e,state,orientation,left";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "left" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient8";
+	 //~ signal:  "e,state,orientation,left_top";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "left_top" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient9";
+	 //~ signal:  "e,state,orientation,left_bottom";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "left_bottom" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient10";
+	 //~ signal:  "e,state,orientation,right";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "right" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient11";
+	 //~ signal:  "e,state,orientation,right_top";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "right_top" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+      //~ program {
+	 //~ name:    "orient12";
+	 //~ signal:  "e,state,orientation,right_bottom";
+	 //~ source:  "e";
+	 //~ action:  STATE_SET "right_bottom" 0.0;
+	 //~ target:  "base";
+	 //~ target:  "e.swallow.content";
+      //~ }
+   //~ }
+}
+}
 }
 group {
    name: "e/shelf/default/inset";

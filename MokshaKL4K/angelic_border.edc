@@ -457,7 +457,158 @@ part { name: "icon"; type: SPACER;
 	}
 }
 
-
+group { name: "e/widgets/border/left_controls/border";
+	inherit: "e/widgets/border/default/border";
+	parts{
+		part { name: "titlebar"; type: RECT;
+			description { state: "default" 0.0;
+				min: 0 27;
+				rel1.relative: 0.0 0.0;
+				rel1.offset: 24 0;
+				//~ rel2.to_y: "title_base";
+				rel2.to_x: "e.event.icon"; 
+				rel2.relative: 1.0 1.0;
+				color: 255 255 255 255;
+				color_class: "border_frame";
+			}
+		}
+		part { name: "e.text.title"; type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               visible: 1;
+               align: 0.0 0.0;
+               rel1.offset: 0 2;
+               rel2 {
+                  relative: 1.0 0.0;
+                  offset: 0 0;
+                  to_x: "title_base";
+               }
+               color_class: "border_title";
+               text {
+                  font: "Play-Bold";
+                  size: 13;
+                  min: 0 1;
+                  align: 0.5 0.0;
+                  text_class: "title_bar";
+               }
+            }
+		}
+		
+		part { name: "title_base"; type: RECT;
+            mouse_events: 0;
+            description {
+			   align: 0.0 0.5;
+               state: "default" 0.0;
+               visible: 0;
+               color: 255 0 0 0;
+               rel1.relative: 0.0 0.0;
+               rel2.to_x: "e.event.icon";
+               rel2 {
+				   
+                  relative: 1.0 1.0;
+                  offset: -23 -1;
+                  to_y: "e.text.title";
+                  to_x: "e.event.icon";
+               }
+            }
+        }
+		part { name: "bt_close"; type: IMAGE;
+			description {
+				align: 0.0 0.5;
+				state: "default" 0.0;
+				rel1.relative: 0.0 0.0;
+				rel2.relative: 0.0 1.0;
+				rel2.offset: 0 1;
+				//~ min: 10 10; max: 10 10; fixed: 1 1;
+				image.normal: "winbt/close_focused_normal.png";
+			}
+			description {
+				state: "prelight" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/close_focused_prelight.png";
+			}
+			description {
+				state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/close_focused_pressed.png";
+			}
+        }
+        part { name: "bt_maximize"; type: IMAGE;
+			description {
+				align: 0.0 0.5;
+				state: "default" 0.0;
+				rel1.to: "bt_close";
+				rel1.relative: 0.0 0.0;
+				rel1.offset: 25 0;
+				rel2.to: "bt_close";
+				rel2.relative: 0.0 1.0;
+				//~ min: 10 10; max: 10 10; fixed: 1 1;
+				image.normal: "winbt/maximize_focused_normal.png";
+			}
+			description {
+				state: "prelight" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/maximize_focused_prelight.png";
+			}
+			description {
+				state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/maximize_focused_pressed.png";
+			}
+        }
+        
+         part { name: "bt_minimize"; type: IMAGE;
+			description {
+				align: 0.0 0.5;
+				state: "default" 0.0;
+				rel1.to: "bt_maximize";
+				rel1.relative: 0.0 0.0;
+				rel1.offset: 25 0;
+				rel2.to: "bt_maximize";
+				rel2.relative: 0.0 1.0;
+				//~ min: 10 10; max: 10 10; fixed: 1 1;
+				image.normal: "winbt/minimize_focused_normal.png";
+			}
+			description {
+				state: "prelight" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/minimize_focused_prelight.png";
+			}
+			description {
+				state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				image.normal: "winbt/minimize_focused_pressed.png";
+			}
+        }
+        
+        
+		part { name: "e.event.titlebar"; type: RECT;
+			 description { state: "default" 0.0;
+				rel1.to: "bt_minimize";
+				rel2.relative: 0.9 1.0;
+				rel2.to_x: "e.event.icon";
+				rel2.offset: -20 0;
+				rel2.to_y: "top_bg";
+				color: 0 0 0 0;
+			 }
+		  } 
+		  
+		 part { name: "e.event.icon"; type: RECT;
+         description { state: "default" 0.0;
+            fixed: 1 0;
+            rel1.relative: 1.0 0.0;
+            rel1.offset: 0 0;
+            rel2.relative: 1.0 1.0;
+            rel2.to_y: "top_bg";
+            align: 1.0 1.0;
+            aspect: 1.0 1.0; aspect_preference: VERTICAL;
+            color: 0 0 0 0;
+         }
+      }
+      }
+}
 
 group { name: "e/widgets/border/noresize/border";
 
