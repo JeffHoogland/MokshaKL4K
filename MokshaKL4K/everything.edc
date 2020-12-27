@@ -431,7 +431,7 @@ group { name: "e/modules/everything/list";
 
 group {
 	name: "e/modules/everything/main";
-	images.image: "images/menu_im0.png" COMP;;
+	//~ images.image: "images/menu_im0.png" COMP;
 #if (EVRY_TRANSPARENT == 1)
 	data{
 		item: "shaped" "1";

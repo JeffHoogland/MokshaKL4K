@@ -1,5 +1,5 @@
 images {
-   image: "e17_brushed.png" COMP;
+   //~ image: "e17_brushed.png" COMP;
    image: "angelic.png" COMP;
    image: "e17_entry_cursor.png" COMP;
    image: "e17_logo.png" COMP;

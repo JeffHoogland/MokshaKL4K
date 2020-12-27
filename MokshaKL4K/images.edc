@@ -5,16 +5,16 @@ image: "surface.png" COMP;
 image: "surface-light.png" COMP;
 
 // efm_nav
-image: "images/efm_nav/e17_toolbar_nav_home.png" COMP;
+//~ image: "images/efm_nav/e17_toolbar_nav_home.png" COMP;
 image: "images/efm_nav/e17_toolbar_nav_back.png" COMP;
 image: "images/efm_nav/e17_toolbar_nav_forward.png" COMP;
 image: "images/efm_nav/e17_toolbar_nav_up.png" COMP;
 image: "images/efm_nav/e17_toolbar_nav_refresh.png" COMP;
-image: "images/efm_nav/e17_toolbar_nav_favorites.png" COMP;
-image: "images/efm_nav/icon_efm_dnd_copy.png" COMP;
-image: "images/efm_nav/icon_efm_dnd_ask.png" COMP;
-image: "images/efm_nav/icon_efm_dnd_move.png" COMP;
-image: "images/efm_nav/icon_efm_vol_unmounted.png" COMP;
-image: "images/efm_nav/icon_efm_vol_mounted.png" COMP;
+//~ image: "images/efm_nav/e17_toolbar_nav_favorites.png" COMP;
+//~ image: "images/efm_nav/icon_efm_dnd_copy.png" COMP;
+//~ image: "images/efm_nav/icon_efm_dnd_ask.png" COMP;
+//~ image: "images/efm_nav/icon_efm_dnd_move.png" COMP;
+//~ image: "images/efm_nav/icon_efm_vol_unmounted.png" COMP;
+//~ image: "images/efm_nav/icon_efm_vol_mounted.png" COMP;
 }
 
