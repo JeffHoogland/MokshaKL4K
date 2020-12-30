@@ -8,7 +8,7 @@ group { name: "e/modules/everything/list";
          description {
             state: "default" 0.0;
             visible: 1;
-				color: 51 51 51 0;
+            color: 51 51 51 0;
          }
       }
       part {
@@ -32,7 +32,7 @@ group { name: "e/modules/everything/list";
          type: RECT;
          description {
             state: "default" 0.0;
-				visible: 0;
+            visible: 0;
             rel1 {
                to_x: "base";
             }
@@ -100,7 +100,7 @@ group { name: "e/modules/everything/list";
          mouse_events: 0;
          description {
             state: "default" 0.0;
-				visible: 0;
+            visible: 0;
             min: 32 25;
             max: 9999 25;
             fixed: 1 1;
@@ -112,7 +112,7 @@ group { name: "e/modules/everything/list";
                offset: -1 -3;
                to: "bar_base";
             }
-				image.normal: "images/surface-light.png";
+                image.normal: "images/surface-light.png";
                 image.border: 8 8 8 8;
          }
       }
@@ -133,7 +133,7 @@ group { name: "e/modules/everything/list";
          clip_to: "input_base";
          description {
             state: "default" 0.0;
-				visible: 0;
+            visible: 0;
             fixed: 1 1;
             min: 32 32;
             max: 9999 32;
@@ -144,9 +144,9 @@ group { name: "e/modules/everything/list";
             rel2 {
                to: "input_base";
             }
-				color: 51 51 51 0;
-				SURFACE_LIGHT;
-            color: 255 255 255 255;
+               color: 51 51 51 0;
+               SURFACE_LIGHT;
+               color: 255 255 255 255;
          }
       }
       part {
@@ -239,8 +239,8 @@ group { name: "e/modules/everything/list";
          description {
             state: "default" 0.0;
             color: 255 255 255 50;
-				visible: 0;
-				SURFACE_LIGHT;
+            visible: 0;
+            SURFACE_LIGHT;
             rel1 {
                to: "list_clip";
                offset: 0 0;
@@ -318,18 +318,18 @@ group { name: "e/modules/everything/list";
          name: "box";
          mouse_events: 0;
          description {
-				visible: 0;
+            visible: 0;
             state: "default" 0.0;
             rel1 {
                to: "input_base";
-					offset: 1 0;
+               offset: 1 0;
             }
             rel2 {
                to: "base";
-					offset: -2 -1;
+               offset: -2 -1;
             }
-				SURFACE_LIGHT;
-				color: 255 255 255 255;
+                SURFACE_LIGHT;
+                color: 255 255 255 255;
          }
       }
    }
@@ -431,7 +431,7 @@ group { name: "e/modules/everything/list";
 
 group {
 	name: "e/modules/everything/main";
-	images.image: "images/menu_im0.png" COMP;;
+	//~ images.image: "images/menu_im0.png" COMP;
 #if (EVRY_TRANSPARENT == 1)
 	data{
 		item: "shaped" "1";
@@ -1447,8 +1447,8 @@ group { name: "e/modules/everything/tab_item";
 group {
       name: "e/modules/everything/thumbview/item/list";
       images {
-		  image: "e17_menu_arrow.png" COMP;
-	  }
+           image: "e17_menu_arrow.png" COMP;
+      }
       parts {
          part {
             name: "bg";
@@ -1501,11 +1501,11 @@ group {
                color: 255 255 255 255;
                rel1 {
                   relative: 0.0 0.0;
-                  offset: 0   3;
+                  offset: 0   0;
                }
                rel2 {
                   relative: 1.0 1.0;
-                  offset: -5  -4;
+                  offset: -5  0;
                }
             }
          }
@@ -1592,7 +1592,7 @@ group {
                   offset: -21  6;
                } color: 51 51 51 255;
             }
-		}
+         }
          part {
             name: "e.text.label";
             type: TEXT;
@@ -1605,14 +1605,14 @@ group {
                rel1 {
                   to_x: "clip";
                   to_y: "base";
-                  offset: 5 2;
-		  relative: 1.0 0.0;
+                  offset: 5 0;
+                  relative: 1.0 0.0;
                }
                rel2 {
                   relative: 0.0 1.0;
-                  offset: 4 -1;
+                  offset: 4  0;
                   to_x: "arrow";
-	          to_y: "spacer";
+                  to_y: "spacer";
                }
                text {
                   font: "Sans";

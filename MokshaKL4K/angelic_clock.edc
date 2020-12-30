@@ -6,8 +6,8 @@
 images {
   image: "e17_clock_bg.png" COMP;
   image: "e17_clock_fg.png" COMP;
-  image: "e17_clock_day.png" COMP;
-  image: "e17_clock_weekday.png" COMP;
+  //~ image: "e17_clock_day.png" COMP;
+  //~ image: "e17_clock_weekday.png" COMP;
   image: "e17_clock_window.png" COMP;
   image: "e17_clock_second_0.png" COMP; image: "e17_clock_second_1.png" COMP; image: "e17_clock_second_2.png" COMP; image: "e17_clock_second_3.png" COMP; image: "e17_clock_second_4.png" COMP; image: "e17_clock_second_5.png" COMP; image: "e17_clock_second_6.png" COMP; image: "e17_clock_second_7.png" COMP; image: "e17_clock_second_8.png" COMP; image: "e17_clock_second_9.png" COMP; image: "e17_clock_second_10.png" COMP; image: "e17_clock_second_11.png" COMP; image: "e17_clock_second_12.png" COMP; image: "e17_clock_second_13.png" COMP; image: "e17_clock_second_14.png" COMP; image: "e17_clock_second_15.png" COMP; image: "e17_clock_second_16.png" COMP; image: "e17_clock_second_17.png" COMP; image: "e17_clock_second_18.png" COMP; image: "e17_clock_second_19.png" COMP; image: "e17_clock_second_20.png" COMP; image: "e17_clock_second_21.png" COMP; image: "e17_clock_second_22.png" COMP; image: "e17_clock_second_23.png" COMP; image: "e17_clock_second_24.png" COMP; image: "e17_clock_second_25.png" COMP; image: "e17_clock_second_26.png" COMP; image: "e17_clock_second_27.png" COMP; image: "e17_clock_second_28.png" COMP; image: "e17_clock_second_29.png" COMP; image: "e17_clock_second_30.png" COMP; image: "e17_clock_second_31.png" COMP; image: "e17_clock_second_32.png" COMP; image: "e17_clock_second_33.png" COMP; image: "e17_clock_second_34.png" COMP; image: "e17_clock_second_35.png" COMP; image: "e17_clock_second_36.png" COMP; image: "e17_clock_second_37.png" COMP; image: "e17_clock_second_38.png" COMP; image: "e17_clock_second_39.png" COMP; image: "e17_clock_second_40.png" COMP; image: "e17_clock_second_41.png" COMP; image: "e17_clock_second_42.png" COMP; image: "e17_clock_second_43.png" COMP; image: "e17_clock_second_44.png" COMP; image: "e17_clock_second_45.png" COMP; image: "e17_clock_second_46.png" COMP; image: "e17_clock_second_47.png" COMP; image: "e17_clock_second_48.png" COMP; image: "e17_clock_second_49.png" COMP; image: "e17_clock_second_50.png" COMP; image: "e17_clock_second_51.png" COMP; image: "e17_clock_second_52.png" COMP; image: "e17_clock_second_53.png" COMP; image: "e17_clock_second_54.png" COMP; image: "e17_clock_second_55.png" COMP; image: "e17_clock_second_56.png" COMP; image: "e17_clock_second_57.png" COMP; image: "e17_clock_second_58.png" COMP; image: "e17_clock_second_59.png" COMP;
   image: "e17_clock_second_s_0.png" COMP; image: "e17_clock_second_s_1.png" COMP; image: "e17_clock_second_s_2.png" COMP; image: "e17_clock_second_s_3.png" COMP; image: "e17_clock_second_s_4.png" COMP; image: "e17_clock_second_s_5.png" COMP; image: "e17_clock_second_s_6.png" COMP; image: "e17_clock_second_s_7.png" COMP; image: "e17_clock_second_s_8.png" COMP; image: "e17_clock_second_s_9.png" COMP; image: "e17_clock_second_s_10.png" COMP; image: "e17_clock_second_s_11.png" COMP; image: "e17_clock_second_s_12.png" COMP; image: "e17_clock_second_s_13.png" COMP; image: "e17_clock_second_s_14.png" COMP; image: "e17_clock_second_s_15.png" COMP; image: "e17_clock_second_s_16.png" COMP; image: "e17_clock_second_s_17.png" COMP; image: "e17_clock_second_s_18.png" COMP; image: "e17_clock_second_s_19.png" COMP; image: "e17_clock_second_s_20.png" COMP; image: "e17_clock_second_s_21.png" COMP; image: "e17_clock_second_s_22.png" COMP; image: "e17_clock_second_s_23.png" COMP; image: "e17_clock_second_s_24.png" COMP; image: "e17_clock_second_s_25.png" COMP; image: "e17_clock_second_s_26.png" COMP; image: "e17_clock_second_s_27.png" COMP; image: "e17_clock_second_s_28.png" COMP; image: "e17_clock_second_s_29.png" COMP; image: "e17_clock_second_s_30.png" COMP; image: "e17_clock_second_s_31.png" COMP; image: "e17_clock_second_s_32.png" COMP; image: "e17_clock_second_s_33.png" COMP; image: "e17_clock_second_s_34.png" COMP; image: "e17_clock_second_s_35.png" COMP; image: "e17_clock_second_s_36.png" COMP; image: "e17_clock_second_s_37.png" COMP; image: "e17_clock_second_s_38.png" COMP; image: "e17_clock_second_s_39.png" COMP; image: "e17_clock_second_s_40.png" COMP; image: "e17_clock_second_s_41.png" COMP; image: "e17_clock_second_s_42.png" COMP; image: "e17_clock_second_s_43.png" COMP; image: "e17_clock_second_s_44.png" COMP; image: "e17_clock_second_s_45.png" COMP; image: "e17_clock_second_s_46.png" COMP; image: "e17_clock_second_s_47.png" COMP; image: "e17_clock_second_s_48.png" COMP; image: "e17_clock_second_s_49.png" COMP; image: "e17_clock_second_s_50.png" COMP; image: "e17_clock_second_s_51.png" COMP; image: "e17_clock_second_s_52.png" COMP; image: "e17_clock_second_s_53.png" COMP; image: "e17_clock_second_s_54.png" COMP; image: "e17_clock_second_s_55.png" COMP; image: "e17_clock_second_s_56.png" COMP; image: "e17_clock_second_s_57.png" COMP; image: "e17_clock_second_s_58.png" COMP; image: "e17_clock_second_s_59.png" COMP;
@@ -746,6 +746,12 @@ group { name: "e/modules/clock/calendar/day";
             color: 51 51 51 125;
             color3: 255 255 255 25;
          }
+         description { state: "weeknumb" 0.0;
+            inherit: "default" 0.0;
+            text.size: 7;
+            text.align: 0.8 0.35;
+            //~ color: 255 255 255 200;
+         }  
       }
       part { name: "label2"; type: TEXT; mouse_events: 0;
          effect: GLOW;
@@ -823,6 +829,11 @@ group { name: "e/modules/clock/calendar/day";
             evalstate();
          }
       }
+      program {
+         signal: "e,state,week"; source: "e";
+         action: STATE_SET "weeknumb" 0.0;
+         target: "e.text.label";
+      }  
    }
 }
 
@@ -990,7 +1001,7 @@ item { \
    weight: 1.0 1.0; \
    align: -1.0 -1.0; \
 }
-               D(0) D(1) D(2) D(3) D(4) D(5) D(6)
+               D(0) D(1) D(2) D(3) D(4) D(5) D(6) D(7)
 #undef D                 
             }
          }
@@ -1018,12 +1029,12 @@ item { \
    weight: 1.0 1.0; \
    align: -1.0 -1.0; \
 }
-               D(0, 0) D(1, 0) D(2, 0) D(3, 0) D(4, 0) D(5, 0) D(6, 0)
-               D(0, 1) D(1, 1) D(2, 1) D(3, 1) D(4, 1) D(5, 1) D(6, 1)
-               D(0, 2) D(1, 2) D(2, 2) D(3, 2) D(4, 2) D(5, 2) D(6, 2)
-               D(0, 3) D(1, 3) D(2, 3) D(3, 3) D(4, 3) D(5, 3) D(6, 3)
-               D(0, 4) D(1, 4) D(2, 4) D(3, 4) D(4, 4) D(5, 4) D(6, 4)
-               D(0, 5) D(1, 5) D(2, 5) D(3, 5) D(4, 5) D(5, 5) D(6, 5)
+               D(0, 0) D(1, 0) D(2, 0) D(3, 0) D(4, 0) D(5, 0) D(6, 0) D(7, 0)
+               D(0, 1) D(1, 1) D(2, 1) D(3, 1) D(4, 1) D(5, 1) D(6, 1) D(7, 1)
+               D(0, 2) D(1, 2) D(2, 2) D(3, 2) D(4, 2) D(5, 2) D(6, 2) D(7, 2)
+               D(0, 3) D(1, 3) D(2, 3) D(3, 3) D(4, 3) D(5, 3) D(6, 3) D(7, 3)
+               D(0, 4) D(1, 4) D(2, 4) D(3, 4) D(4, 4) D(5, 4) D(6, 4) D(7, 4)
+               D(0, 5) D(1, 5) D(2, 5) D(3, 5) D(4, 5) D(5, 5) D(6, 5) D(7, 5) 
 #undef D
             }
          }

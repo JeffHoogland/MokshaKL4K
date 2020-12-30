@@ -1,16 +1,15 @@
 images {
-                   image: "e17_menu_arrow.png" COMP;
-   image: "e17_menu_bg.png" COMP;
-   image: "e17_menu_bg_border.png" COMP;
-   image: "e17_menu_check1.png" COMP;
-   image: "e17_menu_check2.png" COMP;
-   image: "e17_menu_radio1.png" COMP;
-   image: "e17_menu_radio2.png" COMP;
-   image: "e17_menu_radio3.png" COMP;
-   image: "e17_menu_separator.png" COMP;
-            image: "e17_menu_radio3.png" COMP;
- 
-            }
+        image: "e17_menu_arrow.png" COMP;
+        image: "e17_menu_bg.png" COMP;
+        image: "e17_menu_bg_border.png" COMP;
+        image: "e17_menu_check1.png" COMP;
+        image: "e17_menu_check2.png" COMP;
+        image: "e17_menu_radio1.png" COMP;
+        image: "e17_menu_radio2.png" COMP;
+        image: "e17_menu_radio3.png" COMP;
+        image: "e17_menu_separator.png" COMP;
+        image: "e17_menu_radio3.png" COMP;
+}
      
     group {
        name: "e/widgets/menu/default/background";
@@ -678,10 +677,11 @@ images {
              }
           }
       part {
-         name:           "e.text.label";
-         type:           TEXT;
-         effect:         SHADOW;
-         mouse_events:   0;
+         name: "e.text.label";
+         type: TEXT;
+         scale: 1;
+         effect: SHADOW;
+         mouse_events: 0;
          description {
             state: "default" 0.0;
             rel1 {
@@ -697,7 +697,7 @@ images {
             text {
                text:     "Item Label";
                font:     "Edje-Vera";
-               size:     12;
+               size:     11;
                min:      1 1;
                align:    0.0 0.5;
                text_class: "menu_item";
@@ -718,7 +718,7 @@ images {
             text {
                text:     "Item Label";
                font:     "Edje-Vera";
-               size:     12;
+               size:     11;
                min:      1 1;
                align:    0.0 0.5;
                text_class: "menu_item";
@@ -740,7 +740,7 @@ images {
             text {
                text:     "Item Label";
                font:     "Edje-Vera";
-               size:     12;
+               size:     11;
                min:      1 1;
                align:    0.0 0.5;
                text_class: "menu_item";
