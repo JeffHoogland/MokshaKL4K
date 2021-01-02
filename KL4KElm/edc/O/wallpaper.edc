@@ -720,6 +720,11 @@
                rel1.relative: -0.05 -0.05;
                rel2.relative: 1.05 1.05;
             }
+            description {
+               state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
          }
          part {
             name: "e.swallow.content";
@@ -779,7 +784,7 @@
             target: "icon_box";
             target: "base";
             target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }
@@ -976,6 +981,11 @@
                rel1.relative: -0.05 -0.05;
                rel2.relative: 1.05 1.05;
             }
+            description {
+               state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            } 
          }
          part {
             name: "e.swallow.content";
@@ -1060,7 +1070,7 @@
             target: "icon_box";
             target: "base";
             target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "e.swallow.content";
             target: "events";
             target: "theme";
             after: "thumb_gen2";
@@ -1230,6 +1240,11 @@
                rel1.relative: -0.05 -0.05;
                rel2.relative: 1.05 1.05;
             }
+            description {
+               state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            } 
          }
          part {
             name: "e.swallow.content";
@@ -1273,7 +1288,7 @@
             target: "icon_box";
             target: "base";
             target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }

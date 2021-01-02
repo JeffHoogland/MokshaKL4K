@@ -124,6 +124,10 @@ group { name:"e/modules/tasks/item";
             inherit: "default" 0.0;
             color: 255 255 255 125;
          }
+         description { state: "clicked" 0.0;
+            inherit: "default" 0.0;
+            color: 0 0 0 0;
+            }
       }
       part { name: "e.swallow.icon"; type: SWALLOW; mouse_events: 0;
          clip_to: "icon_clip";

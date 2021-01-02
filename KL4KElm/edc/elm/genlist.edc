@@ -292,7 +292,7 @@ group { name: "elm/genlist/item/default/default";
 	  }	\
       program { \
          signal: "elm,state,odd"; source: "elm"; \
-         action: STATE_SET "odd" 1.0; \
+         action: STATE_SET "odd" 0.0; \
          target: "base"; \
       } \
       program { \
@@ -5534,7 +5534,7 @@ group { name: "elm/genlist/item/edit/default";
 	  }
       program {
          signal: "elm,state,odd"; source: "elm";
-         action: STATE_SET "odd" 1.0;
+         action: STATE_SET "odd" 0.0;
          target: "base";
       }
       program {
