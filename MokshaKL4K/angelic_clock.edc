@@ -460,35 +460,26 @@ group { name: "e/modules/clock/digital";
       }
       clock_cb(0);
     }
-
-    public eval_show_date() {
-      new x, y, w, h;
-      get_geometry(PART:"event", x, y, w, h);
-      if ((h >= 32) && ((horizontal) || (w > 90)))
-        run_program(PROGRAM:"today,show");
-      else
-        run_program(PROGRAM:"today,hide");
-    }
   }
 
-  parts {
-    part { name: "time-area";
-      type: RECT;
-      description { state: "default" 0.0;
-        color: 46 52 54 0;
-      }
-      description { state: "show-date" 0.0;
-        inherit: "default" 0.0;
-        rel2 {
-          relative: 1.0 0.0;
-          to: "e.text.today";
-        }
-      }
-    }
-    part { name: "time";
+ parts {
+		part { name: "time-area";
+			type: RECT;
+			description { state: "default" 0.0;
+            visible: 0;
+             }
+			description { state: "show-date" 0.0;
+				inherit: "default" 0.0;
+				rel2 {
+					relative: 1.0 0.0;
+					to: "e.text.today";
+				}
+			}
+		}
+ part { name: "time";
       type: TEXT;
       effect: SHADOW;
-      scale: 1;
+      //~ scale: 1;
       description { state: "default" 0.0;
         //        TEXT_COLOR;
         color: 204 204 204 255;
@@ -500,9 +491,11 @@ group { name: "e/modules/clock/digital";
           font: Play-Bold;
           size: 14;
           fit: 1 1;
+          min: 1 0;
           size_range: 9 72;
           text: "--:--";
           ellipsis: -1;
+          align: 0.5 0.5;
         }
       }
       description { state: "horizontal" 0.0;
@@ -536,7 +529,7 @@ group { name: "e/modules/clock/digital";
         }
         rel2 {
           relative: 1.0 1.0;
-          offset: -1 -1;
+          offset: -1 0;
         }
         text {
           text_class: "clock";
@@ -557,105 +550,99 @@ group { name: "e/modules/clock/digital";
       }
     }
 
-    part { name: "event";
-      type: RECT;
-      mouse_events: 1;
-      description { state: "default" 0.0;
-        color: 46 52 54 0;
-      }
-    }
-  }
+		part { name: "event";
+			type: RECT;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				color: 0 0 0 0;
+			}
+		}
+	}
 
-  programs {
-    program { name: "init";
-      signal: "load";
-      source: "";
-      script {
-        clock_cb(0);
-        eval_show_date();
-      }
-    }
-    program { name: "resize";
-      signal: "resize";
-      source: "";
-      script {
-        eval_show_date();
-      }
-    }
-    program { name: "today,show";
-      signal: "today,show";
-      source: "";
-      action: STATE_SET "show-date" 0.0;
-      target: "time-area";
-      target: "e.text.today";
-    }
-    program { name: "today,hide";
-      signal: "today,hide";
-      source: "";
-      action: STATE_SET "default" 0.0;
-      target: "time-area";
-      target: "e.text.today";
-    }
+	programs {
+		program { name: "init";
+			signal: "load";
+			source: "";
+			script {
+				clock_cb(0);
+			}
+		}
+		program { name: "today,show";
+			signal: "e,state,date,on";
+			source: "e";
+			script {
+            set_state(PART:"time-area", "show-date", 0.0);
+            set_state(PART:"e.text.today", "show-date", 0.0);
+            restart_clock();
+			}
+		}
+		program { name: "today,hide";
+			signal: "e,state,date,off";
+			source: "e";
+			script {
+			set_state(PART:"time-area", "default", 0.0);
+			set_state(PART:"e.text.today", "default", 0.0);
+            restart_clock();
+			}
+		}
 
-    program { name: "secon";
-      signal: "e,state,seconds,on";
-      source: "e";
-      script {
-        set_int(do_seconds, 1);
-        restart_clock();
-      }
-    }
-    program { name: "secoff";
-      signal: "e,state,seconds,off";
-      source: "e";
-      script {
-        set_int(do_seconds, 0);
-        restart_clock();
-      }
-    }
-    program { name: "24h";
-      signal: "e,state,24h,on";
-      source: "e";
-      script {
-        set_int(do_24h, 1);
-        restart_clock();
-      }
-    }
-    program { name: "12h";
-      signal: "e,state,24h,off";
-      source: "e";
-      script {
-        set_int(do_24h, 0);
-        restart_clock();
-      }
-    }
-    program { name: "horizontal";
-      signal: "e,state,horizontal";
-      source: "e";
-      action: STATE_SET "horizontal" 0.0;
-      target: "time";
-      after: "horizontal-eval";
-    }
-    program { name: "horizontal-eval";
-      script {
-        set_int(horizontal, 1);
-        eval_show_date();
-      }
-    }
-    program { name: "vertical";
-      signal: "e,state,vertical";
-      source: "e";
-      action: STATE_SET "vertical" 0.0;
-      target: "time";
-      after: "vertical-eval";
-    }
-    program { name: "vertical-eval";
-      script {
-        set_int(horizontal, 0);
-        eval_show_date();
-      }
-    }
-  }
+		program { name: "secon";
+			signal: "e,state,seconds,on";
+			source: "e";
+			script {
+				set_int(do_seconds, 1);
+				restart_clock();
+			}
+		}
+		program { name: "secoff";
+			signal: "e,state,seconds,off";
+			source: "e";
+			script {
+				set_int(do_seconds, 0);
+				restart_clock();
+			}
+		}
+		program { name: "24h";
+			signal: "e,state,24h,on";
+			source: "e";
+			script {
+				set_int(do_24h, 1);
+				restart_clock();
+			}
+		}
+		program { name: "12h";
+			signal: "e,state,24h,off";
+			source: "e";
+			script {
+				set_int(do_24h, 0);
+				restart_clock();
+			}
+		}
+		program { name: "horizontal";
+			signal: "e,state,horizontal";
+			source: "e";
+			action: STATE_SET "horizontal" 0.0;
+			target: "time";
+			after: "horizontal-eval";
+		}
+		program { name: "horizontal-eval";
+			script {
+				set_int(horizontal, 1);
+			}
+		}
+		program { name: "vertical";
+			signal: "e,state,vertical";
+			source: "e";
+			action: STATE_SET "vertical" 0.0;
+			target: "time";
+			after: "vertical-eval";
+		}
+		program { name: "vertical-eval";
+			script {
+				set_int(horizontal, 0);
+			}
+		}
+	}
    }
 group { name: "e/modules/clock/calendar/dayname";
    parts {
