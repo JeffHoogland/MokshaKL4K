@@ -119,6 +119,7 @@ group {
          select_mode: DEFAULT;
          cursor_mode: BEFORE;
          multiline: 0;
+         scale:     1; 
          source: "e/widgets/entry/selection";
          source4: "e/widgets/entry/cursor";
 	 description {
