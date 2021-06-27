@@ -117,5 +117,7 @@ collections {
 #include "efm_navigation.edc"
 #include "angelic_tasks.edc"
 #include "mokshapreview.edc"
+#include "angelic_notification.edc"
+#include "angelic_xkbswitch.edc"
 }
 
